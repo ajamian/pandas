@@ -44,6 +44,15 @@ matrix:
       - NOSE_ARGS="not slow and not disabled"
       - FULL_DEPS=true
       - CLIPBOARD_GUI=gtk2
+      - BUILD_TYPE=pydata
+      - JOB_NAME: "27_build_test"
+      - JOB_TAG=_BUILD_TEST
+      - BUILD_TEST=true
+    - python: 2.7
+      env:
+      - NOSE_ARGS="not slow and not disabled"
+      - FULL_DEPS=true
+      - CLIPBOARD_GUI=gtk2
       - BUILD_TYPE=conda
       - JOB_NAME: "27_nslow"
       - DOC_BUILD=true # if rst files were changed, build docs in parallel with tests
@@ -130,6 +139,15 @@ matrix:
         - FULL_DEPS=true
         - CLIPBOARD_GUI=gtk2
         - BUILD_TYPE=conda
+        - JOB_NAME: "27_build_test"
+        - JOB_TAG=_BUILD_TEST
+        - BUILD_TEST=true
+      - python: 2.7
+        env:
+        - NOSE_ARGS="not slow and not disabled"
+        - FULL_DEPS=true
+        - CLIPBOARD_GUI=gtk2
+        - BUILD_TYPE=pydata
         - JOB_NAME: "27_build_test"
         - JOB_TAG=_BUILD_TEST
         - BUILD_TEST=true
