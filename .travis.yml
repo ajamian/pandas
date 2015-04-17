@@ -181,6 +181,7 @@ before_script:
 script:
   - echo "script"
   - ci/script.sh
+  - ci/install.sh
 # nothing here, or failed tests won't fail travis
 
 after_script:
