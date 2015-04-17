@@ -2,6 +2,8 @@
 
 echo "inside $0"
 
+source activate pandas
+
 if [ "$INSTALL_TEST" ]; then
     echo "Starting installation test."
     conda uninstall cython || exit 1
