@@ -2,9 +2,8 @@
 
 echo "inside $0"
 
-source activate pandas
-
 if [ "$INSTALL_TEST" ]; then
+    source activate pandas
     echo "Starting installation test."
     conda uninstall cython || exit 1
     python "$TRAVIS_BUILD_DIR"/setup.py sdist --formats=zip,gztar || exit 1
